@@ -8,6 +8,9 @@ const server = http.createServer((req, res) => {
   const path = parsedUrl.pathname;
 
   switch (path) {
+    case '/':
+      serveHtmlFile('home.html', res);
+      break;
     case '/about':
       serveHtmlFile('about.html', res);
       break;
@@ -19,6 +22,12 @@ const server = http.createServer((req, res) => {
       break;
     case '/subscribe':
       serveHtmlFile('subscribe.html', res);
+      break;
+    case '/locations':
+      serveHtmlFile('locations.html', res);
+      break;
+    case '/OurStaff':
+      serveHtmlFile('OurStaff.html', res);
       break;
     default:
       res.writeHead(404, { 'Content-Type': 'text/plain' });
