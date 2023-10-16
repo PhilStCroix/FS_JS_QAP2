@@ -30,6 +30,16 @@ const server = http.createServer((req, res) => {
         res.writeHead(200, { 'Content-Type': 'text/plain' });
         res.end('Subscribe page');
         break;
+      case '/locations':
+        console.log('Locations page requested');
+        res.writeHead(200, { 'Content-Type': 'text/plain' });
+        res.end('Locations page');
+        break;
+      case '/OurStaff':
+        console.log('OurStaff page requested');
+        res.writeHead(200, { 'Content-Type': 'text/plain' });
+        res.end('OurStaff page');
+        break;
       default:
         console.log('Default page requested');
         res.writeHead(404, { 'Content-Type': 'text/plain' });
